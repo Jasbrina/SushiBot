@@ -1,0 +1,56 @@
+plugins{
+    id'java'
+    id'application'
+    id "com.github.johnrengelman.shadow" version "4.0.2"
+}
+
+group 'com.mywebsite'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+//apply plugin: 'application'
+//mainClassName = main()
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenCentral()
+    //maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+}
+
+dependencies {
+
+//    testCompile group: 'junit', name: 'junit', version: '4.12'
+    //testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.6.1'
+    //compile 'com.jagrosh:jda-utilities:2.1.5'
+    //compile group: 'com.squareup', name: 'connect', version: '2.5.2'
+    //compile 'com.squareup.okhttp3:okhttp:3.9.1'
+
+    compile 'com.jagrosh:jda-utilities:2.1.5'
+
+    compile 'org.slf4j:slf4j-nop:1.7.25'
+    compile 'net.dv8tion:JDA:3.8.3_463'
+
+    compile 'com.jagrosh:jda-utilities-command:2.1.5'
+
+    compile 'com.google.apis:google-api-services-sheets:v4-rev553-1.25.0'
+    compile 'com.google.apis:google-api-services-oauth2:v1-rev145-1.25.0'
+    compile 'com.google.api-client:google-api-client:1.23.0'
+    compile 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+    compile 'com.google.apis:google-api-services-sqladmin:v1beta4-rev66-1.25.0'
+
+
+    /*
+    compile 'net.dv8tion:JDA:3.5.0_331'
+    compile 'com.jagrosh:jda-utilities:2.1.5'
+     */
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+}
+apply plugin: 'maven'
