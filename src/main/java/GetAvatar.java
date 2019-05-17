@@ -5,7 +5,7 @@ public class GetAvatar extends Command {
     public GetAvatar() {
         this.name = "avatar";
         this.aliases = new String[]{"avatar"};
-        this.help = "Adds role to user.";
+        this.help = "Pulls up a link to the user's avatar. If a user is linked, it will pull up that specified user's avatar.";
     }
 
     @Override
