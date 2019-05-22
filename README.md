@@ -31,6 +31,7 @@ SushiBot has an extensive list of commands. A full list of commands follow:
 | ------------- |-------------| :-----|
 | Minesweeper | Play a fun game of minesweeper! Made possible through Discord's use of spoiler markdown. Fully randomized. | -ms|
 | Hug | Hug someone!| -hug @\<username>|
+| League | Angry you lost a match? Use this!| -ihateleague or -league|
 | Make a Ship | Create a ship between two people! Inspired by weeb.sh's Image Generation (korra)'s Loveship feature. |-l @\<username1> @\<username2> |
 | Pay Respects| Press -f to pay respects. Literally. | -f|
 | Ask | Ask the magic 8ball a question! | -ask \<question>|
