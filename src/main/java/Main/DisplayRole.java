@@ -36,8 +36,5 @@ public class DisplayRole extends Command {
             builder.setFooter("To add a role, use -ra <role name here>", null);
             builder.setColor(Color.red);
             commandEvent.reply(builder.build());
-
-        TextChannel tx = commandEvent.getTextChannel();
-        User u = commandEvent.getSelfUser();
     }
 }
