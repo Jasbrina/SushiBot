@@ -76,7 +76,7 @@ public class f extends Command {
             inputFile = new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot\\src\\main\\java\\Main\\fun\\f.txt");
             bufferedWriter.write(Integer.toString(fCount++));
             bufferedWriter.close();
-
+            //
         }catch (IOException i){
             i.printStackTrace();
         }
