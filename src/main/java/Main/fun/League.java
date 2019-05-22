@@ -10,12 +10,12 @@ import net.dv8tion.jda.core.EmbedBuilder;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class hug extends Command {
+public class League extends Command {
 
-    public hug(){
-        this.name = "hug";
-        this.aliases = new String[]{"hug"};
-        this.help = "Use -hug @<username> to hug someone!.";
+    public League(){
+        this.name = "league";
+        this.aliases = new String[]{"ihateleague", "smash"};
+        this.help = "Angry that you lost a match? Use -league!";
     }
 
     @Override
@@ -23,9 +23,8 @@ public class hug extends Command {
         Secret secret = new Secret();
         Giphy giphy = new Giphy(secret.getGiphykey());
         String url = "";
-        int size = 0;
         try {
-            SearchFeed sf = giphy.search("anime hug", 0, ThreadLocalRandom.current().nextInt(0, 100 + 1));
+            SearchFeed sf = giphy.search("rage keyboard", 0, ThreadLocalRandom.current().nextInt(0, 48 + 1));
             url = sf.getDataList().get(0).getImages().getOriginal().getUrl();
         }catch (GiphyException g){
             g.printStackTrace();
@@ -33,8 +32,9 @@ public class hug extends Command {
 
         EmbedBuilder b = new EmbedBuilder();
         b.setImage(url);
-        b.setDescription(commandEvent.getAuthor().getName()+" has hugged " + commandEvent.getMessage()
-         .getMentionedUsers().get(0).getName());
+        b.setDescription(commandEvent.getAuthor().getName() + " hates League.");
         commandEvent.reply(b.build());
+
     }
+
 }

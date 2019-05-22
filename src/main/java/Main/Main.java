@@ -36,6 +36,7 @@ public class Main extends ListenerAdapter {
         UserInfo ui = new UserInfo();
         ArtistLookup al = new ArtistLookup();
         Lenny lenny = new Lenny();
+        League league = new League();
 
         CommandClientBuilder ccb = new CommandClientBuilder();
         ccb.setPrefix("-");
@@ -52,7 +53,7 @@ public class Main extends ListenerAdapter {
         ccb.addCommand(sl);
         ccb.addCommand(s);
         ccb.addCommand(ui);
-        ccb.addCommand(love).addCommand(f).addCommand(ask).addCommand(lenny);
+        ccb.addCommand(love).addCommand(f).addCommand(ask).addCommand(lenny).addCommand(league);
         ccb.addCommand(al);
 
         builder.setToken(token);
@@ -71,7 +72,7 @@ public class Main extends ListenerAdapter {
         );
 
         if ((event.getMessage().getContentRaw().contains("goodnight")|| event.getMessage().getContentRaw().contains(
-                "Goodnight")||(event.getMessage().getContentRaw().contains("gn")&&event.getMessage().getContentRaw().length() == 2)||(event.getMessage().getContentRaw().contains("night")&&event.getMessage().getContentRaw().length()==5)||(event.getMessage().getContentRaw().toLowerCase().contains("good") && event.getMessage().getContentRaw().toLowerCase().contains("night"))) && !event.getMessage().getAuthor().isBot()){
+                "Goodnight")||(event.getMessage().getContentRaw().toLowerCase().contains("gn")&&event.getMessage().getContentRaw().length() == 2)||(event.getMessage().getContentRaw().contains("night")&&event.getMessage().getContentRaw().length()==5)||(event.getMessage().getContentRaw().toLowerCase().contains("good") && event.getMessage().getContentRaw().toLowerCase().contains("night"))) && !event.getMessage().getAuthor().isBot()){
             event.getChannel().sendMessage("Goodnight, " + event.getMessage().getAuthor().getName() +"! Sleep well!").queue();
         }
 
