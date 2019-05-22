@@ -1,3 +1,5 @@
+package Main;
+
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 import net.dv8tion.jda.core.EmbedBuilder;
@@ -11,7 +13,6 @@ public class RoleAdder extends Command {
         this.help = "Adds role to user.";
     }
 
-    //TODO: add exception for when can't add an unreachable role
     @Override
     protected void execute(CommandEvent commandEvent) {
         FindRole find = new FindRole();
@@ -26,7 +27,6 @@ public class RoleAdder extends Command {
             if (find.getGuildid().contains(find.getR().toString()))
                 commandEvent.reply("You currently do not have that role.");;
             commandEvent.getGuild().getController().addSingleRoleToMember(find.getAuthor(), find.getR()).complete();
-           // commandEvent.reply(find.getR().getName()+ " role added!");
             commandEvent.reply(new EmbedBuilder().appendDescription(find.getAuthor().getEffectiveName()+", " +find.getR().getName() +" role added!").setColor(Color.red).build());
         }
     }

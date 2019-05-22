@@ -1,3 +1,5 @@
+package Main;
+
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 
@@ -17,6 +19,7 @@ public class Minesweeper extends Command {
         boolean[][] bombGrid = new boolean[WIDTH][HEIGHT];
         int count = 0;
 
+        //randomly assign bombs
         for (int y = 0; y < HEIGHT; y++){
             for (int x = 0; x < WIDTH; x++){
                 int chance = ThreadLocalRandom.current().nextInt(1, 7 + 1);
@@ -64,34 +67,14 @@ public class Minesweeper extends Command {
                     case 7: temp = ":seven:"; break;
                     case 8: temp = ":eight:"; break;
                     default: temp = ":bomb:"; break;
-
                 }
                 discordtemp += "||" + temp + "||";
-                if (x == WIDTH - 1)
-                    discordtemp += "\n";
+                if (x == WIDTH - 1) discordtemp += "\n";
             }
         }
         return "" + "Bomb Count: " + count + "\n" + discordtemp;
     }
 
     @Override
-    protected void execute(CommandEvent event){
-        String minesweep=
-                "||:zero:||||:zero:||||:zero:||||:zero:||||:zero:||||:one:||||:bomb:||||:two:||||:bomb:||\n" +
-                        "||:one:||||:one:||||:one:||||:zero:||||:one:||||:two:||||:three:||||:four:||||:three:||\n" +
-                        "||:one:||||:bomb:||||:one:||||:zero:||||:two:||||:bomb:||||:four:||||:bomb:||||:bomb:||\n" +
-                        "||:one:||||:one:||||:one:||||:zero:||||:two:||||:bomb:||||:bomb:||||:four:||||:two:||\n" +
-                        "||:one:||||:one:||||:one:||||:zero:||||:one:||||:three:||||:bomb:||||:two:||||:zero:||\n" +
-                        "||:one:||||:bomb:||||:one:||||:zero:||||:one:||||:two:||||:two:||||:one:||||:zero:||\n" +
-                        "||:one:||||:two:||||:two:||||:one:||||:one:||||:bomb:||||:two:||||:one:||||:zero:||\n" +
-                        "||:zero:||||:one:||||:bomb:||||:one:||||:one:||||:three:||||:bomb:||||:two:||||:zero:||\n" +
-                        "||:one:||||:two:||||:two:||||:three:||||:two:||||:three:||||:bomb:||||:two:||||:zero:||\n" +
-                        "||:bomb:||||:one:||||:one:||||:bomb:||||:bomb:||||:two:||||:one:||||:one:||||:zero:||"
-                ;
-
-        event.reply(buildMine());
-        //event.reply(minesweep);
-
-    }
-
+    protected void execute(CommandEvent event){ event.reply(buildMine()); }
 }

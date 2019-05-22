@@ -1,3 +1,5 @@
+package Main;
+
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 import net.dv8tion.jda.core.entities.Guild;
@@ -30,7 +32,6 @@ public class ListRoles extends Command{
                 x= botRoles.get(i).getPosition();
             System.out.println(botRoles.get(i).getPosition());
         }
-        System.out.println("HIGHEST" + x); //for debugging purposes
 
         for (int i = 0; i < guildRoles.size(); i++){
             if (!guildRoles.get(i).isPublicRole() && guildRoles.get(i).getPosition() < x)

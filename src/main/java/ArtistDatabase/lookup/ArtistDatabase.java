@@ -1,4 +1,4 @@
-//package ArtistDatabase.lookup;
+//package Main.ArtistDatabase.lookup;
 //
 //import com.google.api.services.sheets.v4.Sheets;
 //import com.google.api.services.sheets.v4.model.ValueRange;
@@ -9,12 +9,12 @@
 //import java.security.GeneralSecurityException;
 //import java.util.List;
 //
-//public class ArtistDatabase extends Command {
+//public class Main.ArtistDatabase extends Command {
 //    private static Sheets sheetsService;
 //    private static final String SPREADSHEET_ID = "1rBY1Oq3lZIciOV86IKUpGJc_c4PYdAqJLnTrlQmAaKY";
 //
 //
-//    public ArtistDatabase() {
+//    public Main.ArtistDatabase() {
 //        this.name = "a";
 //        this.aliases = new String[]{"a"};
 //        this.help = "Search for an artist.";
@@ -26,11 +26,11 @@
 //    }
 //
 //    public static void setup() throws GeneralSecurityException, IOException {
-//        sheetsService = ArtistDatabase.SheetsServiceUtil.getSheetsService();
+//        sheetsService = Main.ArtistDatabase.SheetsServiceUtil.getSheetsService();
 //    }
 //
 //    public static List<Object> getVals() throws IOException, GeneralSecurityException{
-//        sheetsService = ArtistDatabase.SheetsServiceUtil.getSheetsService();
+//        sheetsService = Main.ArtistDatabase.SheetsServiceUtil.getSheetsService();
 //        String range = "E!D4";
 //        ValueRange result = sheetsService.spreadsheets().values().get(SPREADSHEET_ID, range).execute();
 //        int numRows = result.getValues() != null ? result.getValues().size() : 0;

@@ -1,5 +1,6 @@
-package ArtistDatabase;
+package Main.ArtistDatabase;
 
+import Main.Secret.Secret;
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp;
 import com.google.api.client.extensions.jetty.auth.oauth2.LocalServerReceiver;
@@ -25,19 +26,16 @@ import java.util.List;
 
 public class GoogleAuthorizeUtil {
     public static Credential authorize() throws IOException, GeneralSecurityException {
+        Secret secret = new Secret();
 
-        InputStream in = GoogleAuthorizeUtil.class.getResourceAsStream("/client_secret_986013887126-io8i38iedluoqih0lf8nkee7u55jbqjg.apps.googleusercontent.com.json");
+        InputStream in = GoogleAuthorizeUtil.class.getResourceAsStream(secret.getA());
 
-        GoogleCredential cred = GoogleCredential.fromStream(new FileInputStream("C:\\Users\\djasb\\IdeaProjects" +
-                "\\sushi-bot\\src\\main\\resources\\lookup-Repository-efdd3c993e30.json")).createScoped(Collections.singleton(SQLAdminScopes.SQLSERVICE_ADMIN));
+        GoogleCredential cred = GoogleCredential.fromStream(new FileInputStream("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot\\src\\main\\resources\\test-Repository-efdd3c993e30.json")).createScoped(Collections.singleton(SQLAdminScopes.SQLSERVICE_ADMIN));
 
         SQLAdmin sqladmin =
                 new SQLAdmin.Builder(GoogleNetHttpTransport.newTrustedTransport(), JacksonFactory.getDefaultInstance(), cred).setApplicationName("SushiBot").build();
 
-
-
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JacksonFactory.getDefaultInstance(), new InputStreamReader(in));
-
         List<String> scopes = Arrays.asList(SheetsScopes.SPREADSHEETS);
 
         GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(GoogleNetHttpTransport.newTrustedTransport(), JacksonFactory.getDefaultInstance(), clientSecrets, scopes).setDataStoreFactory(new MemoryDataStoreFactory())
@@ -45,7 +43,6 @@ public class GoogleAuthorizeUtil {
         Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize("user");
         SQLAdmin.Instances.List instances =
                 sqladmin.instances().list("SushiBot");
-
         return credential;
     }
 
