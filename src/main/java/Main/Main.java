@@ -84,7 +84,8 @@ public class Main extends ListenerAdapter {
             String user2im = g.getMemberById(secret.getJid2()).getUser().getAvatarUrl();
             l.jendy(user1im, user2im);
 
-            event.getChannel().sendFile(new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot\\src\\main\\java\\Main.fun\\images\\imagej.png")).queue();
+            event.getChannel().sendFile(new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot" +
+                    "\\src\\main\\java\\Main\\fun\\images\\imagej.png")).queue();
         }
 
         if ((event.getMessage().getContentRaw().contains("morning")|| event.getMessage().getContentRaw().contains(

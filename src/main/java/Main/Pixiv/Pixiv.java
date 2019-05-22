@@ -91,7 +91,6 @@ public class Pixiv{
             System.out.println("Login successful.");
             List<Work> works = client.search(keyword);
             String url = works.get(k).getImageUrls().getSmall();
-
             User user = works.get(k).getUser();
                 String username = user.getName();
                 ProfileImageUrls piu = user.getProfileImageUrls();

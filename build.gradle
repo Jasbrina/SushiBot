@@ -9,7 +9,7 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 //apply plugin: 'application'
-//mainClassName = main()
+mainClassName = 'Main.main'
 
 sourceCompatibility = 1.8
 
@@ -55,6 +55,7 @@ dependencies {
     compile 'com.google.apis:google-api-services-sqladmin:v1beta4-rev66-1.25.0'
 
 
+
     /*
     compile 'net.dv8tion:JDA:3.5.0_331'
     compile 'com.jagrosh:jda-utilities:2.1.5'
@@ -68,3 +69,12 @@ allprojects {
     }
 }
 apply plugin: 'maven'
+apply plugin: "com.github.johnrengelman.shadow"
+
+
+
+shadowJar {
+    manifest {
+        attributes 'Main-Class': 'Main.Main'
+    }
+}

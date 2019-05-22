@@ -41,7 +41,8 @@ public class love extends Command {
     }
 
     public static void downloadImage(String u, String filename) throws IOException{
-        final String saveDir = ("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot\\src\\main\\java\\Main.fun\\images");
+        final String saveDir = ("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot\\src\\main\\java" +
+                "\\Main\\fun\\images");
         final int BUFFER_SIZE = 4096;
 
         URL url = new URL(u);
@@ -78,33 +79,33 @@ public class love extends Command {
             //========= 1st join ====
 
             BufferedImage img1 = ImageIO.read(new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot" +
-                    "\\sushibot\\src\\main\\java\\Main.fun\\images\\im1.png"));
+                    "\\sushibot\\src\\main\\java\\Main\\fun\\images\\im1.png"));
             BufferedImage img2 = ImageIO.read(new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot" +
-                    "\\sushibot\\src\\main\\java\\Main.fun\\images\\love.png"));
+                    "\\sushibot\\src\\main\\java\\Main\\fun\\images\\love.png"));
             BufferedImage joinedImg = joinBufferedImage(img1, img2);
 
             ImageIO.write(joinedImg, "png", new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot" +
-                    "\\src\\main\\java\\Main.fun\\images\\image1.png"));
+                    "\\src\\main\\java\\Main\\fun\\images\\image1.png"));
 
             //========= 2nd join ====
 
             BufferedImage img3 = ImageIO.read(new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot" +
-                    "\\src\\main\\java\\Main.fun\\images\\image1.png"));
+                    "\\src\\main\\java\\Main\\fun\\images\\image1.png"));
 
             BufferedImage img4 = ImageIO.read(new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot" +
-                    "\\sushibot\\src\\main\\java\\Main.fun\\images\\im2.png"));
+                    "\\sushibot\\src\\main\\java\\Main\\fun\\images\\im2.png"));
 
             BufferedImage joinedImg2 = joinBufferedImage(img3, img4);
             ImageIO.write(joinedImg2, "png", new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot" +
                     "\\sushibot" +
-                    "\\src\\main\\java\\Main.fun\\images\\image2.png"));
+                    "\\src\\main\\java\\Main\\fun\\images\\image2.png"));
 
         }catch(IOException e){
             e.printStackTrace();
         }
 
         commandEvent.getChannel().sendFile(new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot" +
-                "\\sushibot\\src\\main\\java\\Main.fun\\images\\image2.png")).queue();
+                "\\sushibot\\src\\main\\java\\Main\\fun\\images\\image2.png")).queue();
 
     }
 
@@ -116,26 +117,26 @@ public class love extends Command {
             //========= 1st join ====
 
             BufferedImage img1 = ImageIO.read(new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot" +
-                    "\\sushibot\\src\\main\\java\\Main.fun\\images\\im1.png"));
+                    "\\sushibot\\src\\main\\java\\Main\\fun\\images\\im1.png"));
             BufferedImage img2 = ImageIO.read(new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot" +
-                    "\\sushibot\\src\\main\\java\\Main.fun\\images\\love.png"));
+                    "\\sushibot\\src\\main\\java\\Main\\fun\\images\\love.png"));
             BufferedImage joinedImg = joinBufferedImage(img1, img2);
 
             ImageIO.write(joinedImg, "png", new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot" +
-                    "\\src\\main\\java\\Main.fun\\images\\image1.png"));
+                    "\\src\\main\\java\\Main\\fun\\images\\image1.png"));
 
             //========= 2nd join ====
 
             BufferedImage img3 = ImageIO.read(new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot" +
-                    "\\src\\main\\java\\Main.fun\\images\\image1.png"));
+                    "\\src\\main\\java\\Main\\fun\\images\\image1.png"));
 
             BufferedImage img4 = ImageIO.read(new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot" +
-                    "\\sushibot\\src\\main\\java\\Main.fun\\images\\im2.png"));
+                    "\\sushibot\\src\\main\\java\\Main\\fun\\images\\im2.png"));
 
             BufferedImage joinedImg2 = joinBufferedImage(img3, img4);
             ImageIO.write(joinedImg2, "png", new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot" +
                     "\\sushibot" +
-                    "\\src\\main\\java\\Main.fun\\images\\imagej.png"));
+                    "\\src\\main\\java\\Main\\fun\\images\\imagej.png"));
 
         }catch(IOException e){
             e.printStackTrace();
