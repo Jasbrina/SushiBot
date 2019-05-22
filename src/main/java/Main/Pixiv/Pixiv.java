@@ -1,8 +1,7 @@
-package Pixiv;
-import Secret.Secret;
+package Main.Pixiv;
+import Main.Secret.Secret;
 import com.scienjus.client.PixivParserClient;
 import com.scienjus.model.*;
-import com.scienjus.param.ParserParam;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -20,8 +19,7 @@ public class Pixiv{
     private String PASSWORD;
     final static String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
             + "Chrome/74.0.3729.131 Safari/537.36";
-    final static String saveDir = ("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot\\src\\main" +
-            "\\java\\Pixiv\\images");
+    final static String saveDir = ("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot\\src\\main\\java\\Main\\Pixiv\\images");
     final static int BUFFER_SIZE = 4096;
 
     public Pixiv(){

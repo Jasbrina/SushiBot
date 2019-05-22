@@ -1,6 +1,6 @@
-package Main.ArtistDatabase.lookup;
+package ArtistDatabase.lookup;
 /*
-import Main.ArtistDatabase.SheetsServiceUtil;
+import ArtistDatabase.SheetsServiceUtil;
 import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.model.*;
 import org.junit.BeforeClass;

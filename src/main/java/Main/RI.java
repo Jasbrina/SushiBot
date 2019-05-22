@@ -1,6 +1,6 @@
 package Main;
 
-import Main.ArtistDatabase.Lookup;
+import ArtistDatabase.Lookup;
 import Main.Pixiv.Pixiv;
 import Main.Pixiv.PixivStatsImg;
 import com.jagrosh.jdautilities.command.Command;
@@ -59,7 +59,7 @@ public class RI extends Command {
         }
 
         File f = new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot\\src\\main\\java" +
-                "\\Main.Pixiv\\images\\0.jpg");
+                "\\Main\\Pixiv\\images\\0.jpg");
 
 
         //build EmbedBuilder
@@ -91,7 +91,7 @@ public class RI extends Command {
         MessageBuilder message = new MessageBuilder();
         message.setEmbed(b.build());
         channel.sendFile(new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot\\src\\main" +
-                "\\java\\Main.Pixiv\\images\\1.jpg"), message.build()).queue();
+                "\\java\\Main\\Pixiv\\images\\1.jpg"), message.build()).queue();
 
         commandEvent.getChannel().sendFile(f).queue();
 

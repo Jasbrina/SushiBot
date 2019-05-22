@@ -1,4 +1,4 @@
-package fun;
+package Main.fun;
 
 import at.mukprojects.giphy4j.Giphy;
 import at.mukprojects.giphy4j.entity.search.SearchFeed;

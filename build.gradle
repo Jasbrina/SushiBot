@@ -17,6 +17,14 @@ repositories {
     jcenter()
     mavenCentral()
     //maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+    maven{
+        url "https://jitpack.io"
+        
+    }
+}
+
+configurations.all {
+    exclude module: 'slf4j-log4j12'
 }
 
 dependencies {
@@ -27,17 +35,23 @@ dependencies {
     //compile group: 'com.squareup', name: 'connect', version: '2.5.2'
     //compile 'com.squareup.okhttp3:okhttp:3.9.1'
 
-    compile 'com.jagrosh:jda-utilities:2.1.5'
+    // https://mvnrepository.com/artifact/org.json/json
+    compile group: 'org.json', name: 'json', version: '20180813'
+    compile 'com.github.ScienJus:pixiv-parser:master'
+    // https://mvnrepository.com/artifact/at.mukprojects/giphy4j
+    compile 'com.github.paulrademacher:lenny:master'
+    compile group: 'at.mukprojects', name: 'giphy4j', version: '1.0.0'
 
+    compile 'com.github.Augugrumi:libris:v1.0.0'
+    compile 'com.jagrosh:jda-utilities:2.1.5'
     compile 'org.slf4j:slf4j-nop:1.7.25'
     compile 'net.dv8tion:JDA:3.8.3_463'
-
     compile 'com.jagrosh:jda-utilities-command:2.1.5'
-
-    compile 'com.google.apis:google-api-services-sheets:v4-rev553-1.25.0'
+    //compile 'com.google.apis:google-api-services-sheets:v4-rev553-1.25.0'
     compile 'com.google.apis:google-api-services-oauth2:v1-rev145-1.25.0'
     compile 'com.google.api-client:google-api-client:1.23.0'
     compile 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+    compile 'com.google.apis:google-api-services-sheets:v4-rev516-1.23.0'
     compile 'com.google.apis:google-api-services-sqladmin:v1beta4-rev66-1.25.0'
 
 

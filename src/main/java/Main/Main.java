@@ -1,6 +1,6 @@
 package Main;
 
-import Main.ArtistDatabase.ArtistLookup;
+import ArtistDatabase.ArtistLookup;
 import Main.Secret.Secret;
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
 import Main.fun.*;

@@ -1,4 +1,4 @@
-package fun;
+package Main.fun;
 
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
@@ -16,12 +16,12 @@ public class f extends Command {
     public void execute(CommandEvent commandEvent) {
         int fCount = 0;
         int userFCount = 0;
-        File inputFile = new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot\\src\\main" +
-                "\\java\\fun\\f.txt").getAbsoluteFile();
+        File inputFile = new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot\\src\\main\\java\\Main\\fun\\f.txt").getAbsoluteFile();
         String userID = commandEvent.getAuthor().getId();
         File userF;
 
-        userF = new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot\\src\\main\\java\\fun\\" + userID + ".txt");
+        userF = new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot\\src\\main\\java" +
+                "\\Main\\fun\\" + userID + ".txt");
 
         System.out.println(userID);
 
@@ -41,7 +41,7 @@ public class f extends Command {
             }
 
             userF = new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot\\src\\main\\java" +
-                    "\\fun\\" + userID + ".txt");
+                    "\\Main\\fun\\" + userID + ".txt");
             BufferedWriter bw = new BufferedWriter(new FileWriter(userF));
             bw.write(Integer.toString(userFCount+1));
             bw.close();
@@ -73,7 +73,7 @@ public class f extends Command {
         int lf = fCount - 1;
         try{
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(inputFile));
-            inputFile = new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot\\src\\main\\java\\fun\\f.txt");
+            inputFile = new File("C:\\Users\\SUSHIHAMMER\\Documents\\IdeaProjects\\sushibot\\sushibot\\src\\main\\java\\Main\\fun\\f.txt");
             bufferedWriter.write(Integer.toString(fCount++));
             bufferedWriter.close();
 

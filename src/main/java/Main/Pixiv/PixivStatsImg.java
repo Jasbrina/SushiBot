@@ -1,4 +1,4 @@
-package Pixiv;
+package Main.Pixiv;
 
 public class PixivStatsImg {
     private String url, username, profileUrl, caption;

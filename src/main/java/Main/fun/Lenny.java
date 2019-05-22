@@ -1,6 +1,5 @@
-package fun;
+package Main.fun;
 
-import ArtistDatabase.Lookup;
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 import lenny.Lenny2;

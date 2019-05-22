@@ -1,4 +1,4 @@
-package Main.ArtistDatabase;
+package ArtistDatabase;
 
 import Main.Secret.Secret;
 import com.google.api.services.sheets.v4.Sheets;
