@@ -2,7 +2,7 @@
  
 
 [logo]: https://i.imgur.com/U1fQ4D8.png "."
-General-purpose artbot created for assisting in several Discord servers. Has a variety of commands, ranging from administrative to fun and art-esque. 
+General-purpose artbot created for assisting in several Discord servers. Has a variety of commands, ranging from administrative to fun and art-esque. Hosted 24/7.
 
 
 ## Invite to Server
